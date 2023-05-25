@@ -1,0 +1,21 @@
+from earsketch import *
+
+setEffect(1, DELAY, DELAY_TIME, 500)
+
+fitMedia(CIARA_ROOTED_DRUMBEAT_1, 1, 2, 34)
+fitMedia(CIARA_SET_THEME_MELSYNTH, 2, 1, 34)
+
+synth = CIARA_ROOTED_DRUMBEAT_1
+cymbal = CIARA_SET_THEME_MELSYNTH
+beat1 = "-00-00+++00--0-0"
+beat2 = "0--0--000--00-0-"
+
+makeBeat(synth, 1, 1, beat1)
+makeBeat(cymbal, 2, 1, beat2)
+
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+for measure in range(1, 34):
+    makeBeat(drum1, 1, measure, beat_string)
+    
+setTempo(120)
